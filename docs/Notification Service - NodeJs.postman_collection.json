@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "59ef55ed-3c6a-4cf2-96bd-eb97df5ef683",
+		"name": "Notification Service - NodeJs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Notification",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"recipientId\": \"{{$randomUUID}}\",\n    \"content\": \"aleatoria notificação de pegadinha\",\n    \"category\": \"pegadinha\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/notifications",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"notifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Count From Recipient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/notifications/count/from/:recipientId",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"notifications",
+						"count",
+						"from",
+						":recipientId"
+					],
+					"variable": [
+						{
+							"key": "recipientId",
+							"value": "300b2eea-51e7-47a6-9294-a6eb519cf2fd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Notifications from Recipient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/notifications/from/:recipientId",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"notifications",
+						"from",
+						":recipientId"
+					],
+					"variable": [
+						{
+							"key": "recipientId",
+							"value": "300b2eea-51e7-47a6-9294-a6eb519cf2fd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Notification",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/notifications/:id/cancel",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"notifications",
+						":id",
+						"cancel"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "ddd48c21-f96f-477e-a484-4f9e8ae91a3b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Notification",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/notifications/:id/read",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"notifications",
+						":id",
+						"read"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "ddd48c21-f96f-477e-a484-4f9e8ae91a3b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unread Notification",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/notifications/:id/unread",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"notifications",
+						":id",
+						"unread"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "ddd48c21-f96f-477e-a484-4f9e8ae91a3b"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000"
+		}
+	]
+}
