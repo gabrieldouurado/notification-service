@@ -1,0 +1,13 @@
+{
+  "project-name": "Notification Service",
+  "little-description": "Serviço de notificações",
+  "full-description": "O projeto é um serviço de notivicações que fará parte de uma arquitetura de microsserviços. Ele foi constuído usando o framework NestJS e fazendo uso de vários Design Patterns com In Memory Database, Repository, Value Objects, Factory, DTOs. O software de ORM escolhido foi o Prisma, justamente por possuir uma compatibilidade com o Nest, o banco escolhido foi o SQLite, pois ele é leve e simples e sulficiente para o tamanho do projeto",
+  "screenshots": [
+    {
+      "name": "pagina-inicial",
+      "path": "/assets/pagina-inicial.png"
+    }
+  ],
+  "stack": ["Node", "NestJS", "typescript", "SQLite", "Jest", "Supertest", "Prisma"],
+  "tags": ["backend", "microsservices"]
+}   
